@@ -1,0 +1,215 @@
+
+R0 = Ring0
+R3 = Ring3
+LIBHFS = $(R3)/libhfs
+FLT = hfsflt
+UHFS = UHFS
+UTIL = util
+PREPARE_DIR = $(UTIL)/Prepare
+DOC = doc
+
+# Files in the distribution
+DIST_FILES = \
+	$(R0)/hfs.ifs \
+	$(R3)/hfs.exe \
+	$(FLT)/hfsflt.flt \
+	$(UHFS)/uhfs.dll \
+	$(UTIL)/sync.exe \
+	$(PREPARE_DIR)/prepare.exe \
+	$(UTIL)/fskill.exe \
+	$(UTIL)/bindisk.exe \
+	$(DOC)/hfs.inf \
+	$(DOC)/COPYING \
+	$(DOC)/README \
+	$(DOC)/file_id.diz \
+	hfs.ddp \
+	hfssrc.zip
+
+RING0_SRCFILES = \
+	$(R0)/Makefile \
+	$(R0)/hfs.def \
+	$(R0)/c0.asm \
+	$(R0)/fsd.h \
+	$(R0)/fsh.h \
+	$(R0)/log.c \
+	$(R0)/log.h \
+	$(R0)/r0comm.c \
+	$(R0)/r0comm.h \
+	$(R0)/r0global.c \
+	$(R0)/r0global.h \
+	$(R0)/r0struct.h \
+	$(R0)/stubs.c \
+	$(R0)/vsprintf.c \
+	$(R0)/vsprintf.h
+
+DOC_SRCFILES = \
+	$(DOC)/Makefile \
+	$(DOC)/hfs.ipf \
+	$(DOC)/README \
+	$(DOC)/COPYING \
+	$(DOC)/file_id.diz
+
+RING3_SRCFILES = \
+	$(R3)/Makefile \
+	$(R3)/Rules.make \
+	$(R3)/hfs.def \
+	$(R3)/attr.c \
+	$(R3)/attr.h \
+	$(R3)/cache.c \
+	$(R3)/cache.h \
+	$(R3)/colour.c \
+	$(R3)/colour.h \
+	$(R3)/dir.c \
+	$(R3)/dirsearch.c \
+	$(R3)/dirsearch.h \
+	$(R3)/diskfunc.c \
+	$(R3)/diskfunc.h \
+	$(R3)/ea.c \
+	$(R3)/ea.h \
+	$(R3)/error.c \
+	$(R3)/error.h \
+	$(R3)/file.c \
+	$(R3)/fsctl.c \
+	$(R3)/fsctl.h \
+	$(R3)/fsd.h \
+	$(R3)/fsdep.h \
+	$(R3)/icon.c \
+	$(R3)/icon.h \
+	$(R3)/log.c \
+	$(R3)/log.h \
+	$(R3)/logger.c \
+	$(R3)/logger.h \
+	$(R3)/misc.c \
+	$(R3)/mountstatus.h \
+	$(R3)/names.c \
+	$(R3)/names.h \
+	$(R3)/r3comm.c \
+	$(R3)/r3global.h \
+	$(R3)/resource.c \
+	$(R3)/resource.h \
+	$(R3)/times.c \
+	$(R3)/times.h \
+	$(R3)/trans.h \
+	$(R3)/userfunc.c \
+	$(R3)/userfunc.h \
+	$(R3)/vol.c \
+	$(R3)/vol.h
+
+LIBHFS_SRCFILES = \
+	$(LIBHFS)/Makefile \
+	$(LIBHFS)/block.c \
+	$(LIBHFS)/block.h \
+	$(LIBHFS)/btree.c \
+	$(LIBHFS)/btree.h \
+	$(LIBHFS)/data.c \
+	$(LIBHFS)/data.h \
+	$(LIBHFS)/file.c \
+	$(LIBHFS)/file.h \
+	$(LIBHFS)/hfs.c \
+	$(LIBHFS)/hfs.h \
+	$(LIBHFS)/internal.h \
+	$(LIBHFS)/low.c \
+	$(LIBHFS)/low.h \
+	$(LIBHFS)/node.c \
+	$(LIBHFS)/node.h \
+	$(LIBHFS)/record.c \
+	$(LIBHFS)/record.h \
+	$(LIBHFS)/volume.c \
+	$(LIBHFS)/volume.h
+
+FLT_SRCFILES = \
+	$(FLT)/Makefile \
+	$(FLT)/hfsflt.def \
+	$(FLT)/boot.c \
+	$(FLT)/diskstrc.h \
+	$(FLT)/filter.c \
+	$(FLT)/fltlog.c \
+	$(FLT)/globals.c \
+	$(FLT)/globals.h \
+	$(FLT)/hfsflt.h \
+	$(FLT)/init.c \
+	$(FLT)/initutil.c \
+	$(FLT)/initutil.h \
+	$(FLT)/io.c \
+	$(FLT)/log.c \
+	$(FLT)/log.h \
+	$(FLT)/segs.asm \
+	$(FLT)/stdarg.h \
+	$(FLT)/strat1.c \
+	$(FLT)/vsprintf.c \
+	$(FLT)/vsprintf.h
+
+UHFS_LIBHFS = $(UHFS)/libhfs
+UHFS_LIBHFS_SRCFILES = \
+	$(UHFS_LIBHFS)/Makefile \
+	$(UHFS_LIBHFS)/block.c \
+	$(UHFS_LIBHFS)/block.h \
+	$(UHFS_LIBHFS)/btree.c \
+	$(UHFS_LIBHFS)/btree.h \
+	$(UHFS_LIBHFS)/data.c \
+	$(UHFS_LIBHFS)/data.h \
+	$(UHFS_LIBHFS)/file.c \
+	$(UHFS_LIBHFS)/file.h \
+	$(UHFS_LIBHFS)/hfs.c \
+	$(UHFS_LIBHFS)/hfs.h \
+	$(UHFS_LIBHFS)/internal.h \
+	$(UHFS_LIBHFS)/low.c \
+	$(UHFS_LIBHFS)/low.h \
+	$(UHFS_LIBHFS)/node.c \
+	$(UHFS_LIBHFS)/node.h \
+	$(UHFS_LIBHFS)/os2func.c \
+	$(UHFS_LIBHFS)/os2func.h \
+	$(UHFS_LIBHFS)/record.c \
+	$(UHFS_LIBHFS)/record.h \
+	$(UHFS_LIBHFS)/volume.c \
+	$(UHFS_LIBHFS)/volume.h
+
+UHFS_SRCFILES = \
+	$(UHFS_LIBHFS_SRCFILES) \
+	$(UHFS)/Makefile \
+	$(UHFS)/uhfs.def \
+	$(UHFS)/c0.asm \
+	$(UHFS)/chkdsk.c \
+	$(UHFS)/format.c \
+	$(UHFS)/misc.c \
+	$(UHFS)/misc.h \
+	$(UHFS)/recover.c \
+	$(UHFS)/sys.c \
+	$(UHFS)/uhfs.h
+
+PREPARE_SRCFILES = \
+	$(PREPARE_DIR)/Makefile \
+	$(PREPARE_DIR)/boot.c \
+	$(PREPARE_DIR)/diskstruc.h \
+	$(PREPARE_DIR)/names.c \
+	$(PREPARE_DIR)/names.h \
+	$(PREPARE_DIR)/prepare.c \
+	$(PREPARE_DIR)/prepare.def \
+	$(PREPARE_DIR)/prepare.h \
+	$(PREPARE_DIR)/trans.h
+
+UTIL_SRCFILES = \
+	$(PREPARE_SRCFILES) \
+	$(UTIL)/Makefile \
+	$(UTIL)/Rules.make \
+	$(UTIL)/bindisk.c \
+	$(UTIL)/fskill.c \
+	$(UTIL)/fskill.def \
+	$(UTIL)/readres.c \
+	$(UTIL)/sync.c \
+	$(UTIL)/sync.def
+
+SRCFILES = \
+	$(RING0_SRCFILES) \
+	$(RING3_SRCFILES) \
+	$(FLT_SRCFILES) \
+	$(UHFS_SRCFILES) \
+	$(UTIL_SRCFILES) \
+	$(DOC_SRCFILES) \
+	$(LIBHFS_SRCFILES) \
+	Makefile \
+	hfs.ddp \
+	files.lst \
+	banner.h \
+	hfsctl.h \
+	r0r3shar.h

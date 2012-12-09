@@ -1,0 +1,70 @@
+;
+; HFS/2 - A Hierarchical File System Driver for OS/2
+; Copyright (C) 1996, 1997 Marcus Better
+;
+; This program is free software; you can redistribute it and/or modify
+; it under the terms of the GNU General Public License as published by
+; the Free Software Foundation; either version 2 of the License, or
+; (at your option) any later version.
+;
+; This program is distributed in the hope that it will be useful,
+; but WITHOUT ANY WARRANTY; without even the implied warranty of
+; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+; GNU General Public License for more details.
+;
+; You should have received a copy of the GNU General Public License
+; along with this program; if not, write to the Free Software
+; Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+;
+
+; hfs.def
+; Linker definition file
+
+LIBRARY                 HFS
+DESCRIPTION             'HFS/2 - A Hierarchical File System Driver for OS/2'
+EXETYPE                 OS2
+DATA			SINGLE PRELOAD
+CODE			PRELOAD
+PROTMODE
+STACKSIZE               0
+EXPORTS
+    FS_NAME
+    FS_ATTRIBUTE
+    FS_ATTACH
+;    FS_CANCELLOCKREQUEST
+    FS_CHDIR
+    FS_CHGFILEPTR
+    FS_CLOSE
+    FS_COMMIT
+    FS_COPY
+    FS_DELETE
+    FS_EXIT
+    FS_FILEATTRIBUTE
+    FS_FILEINFO
+    FS_FILEIO
+;    FS_FILELOCKS
+    FS_FINDCLOSE
+    FS_FINDFIRST
+    FS_FINDFROMNAME
+    FS_FINDNEXT
+    FS_FINDNOTIFYCLOSE              ; Obsolete in OS/2 WARP
+    FS_FINDNOTIFYFIRST              ; Obsolete in OS/2 WARP
+    FS_FINDNOTIFYNEXT               ; Obsolete in OS/2 WARP
+    FS_FLUSHBUF
+    FS_FSCTL
+    FS_FSINFO
+    FS_INIT
+    FS_IOCTL
+    FS_MKDIR
+    FS_MOUNT
+    FS_MOVE
+    FS_NEWSIZE
+    FS_NMPIPE
+    FS_OPENCREATE
+    FS_PATHINFO
+    FS_PROCESSNAME
+    FS_READ
+    FS_RMDIR
+    FS_SETSWAP
+    FS_SHUTDOWN
+    FS_WRITE

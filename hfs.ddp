@@ -1,0 +1,41 @@
+*
+* HFS/2 - A Hierarchical File System Driver for OS/2
+* Copyright (C) 1996, 1997 Marcus Better
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+*
+
+* HFS.DDP
+* Device Driver Profile for HFS/2.
+
+:TITLE
+HFS/2 - A Hierarchical File System Driver for OS/2
+
+:FILES
+hfs.ifs \os2\fs\hfs\hfs.ifs
+hfs.exe \os2\fs\hfs\hfs.exe
+hfsflt.flt \os2\boot\hfsflt.flt
+uhfs.dll \os2\dll\uhfs.dll
+sync.exe \os2\fs\hfs\sync.exe
+prepare.exe \os2\fs\hfs\prepare.exe
+fskill.exe \os2\fs\hfs\fskill.exe
+hfs.inf \os2\fs\hfs\hfs.inf
+COPYING \os2\fs\hfs\COPYING
+README \os2\fs\hfs\README
+
+:CONFIG
+BASEDEV=HFSFLT.FLT
+IFS=\OS2\FS\HFS\HFS.IFS
+RUN=\OS2\FS\HFS\HFS.EXE

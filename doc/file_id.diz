@@ -1,0 +1,4 @@
+A Hierarchical File System driver for OS/2.
+HFS/2 lets you read and write Macintosh
+volumes seamlessly under OS/2.
+Currently works with diskettes and CD-ROMs.
